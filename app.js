@@ -7,3 +7,47 @@
 
 
 // Constructor will be housed in game.js file
+
+Display = function(word) {
+
+  this.wordArray = word.split(''),
+  this.dashesArray = [],
+  this.updated,
+  this.originalDisplay = function() {
+      for (var i = 0; i < this.wordArray.length; i++) {
+        wordArray[i]
+          if(this.wordArray[i] === ' '){
+            x = ' ';
+            this.dashesArray.push(x);
+          }
+          else {
+            x = '-';
+            this.dashesArray.push(x);
+          }
+      }
+      console.log(this.dashesArray.join(''));
+
+  },
+  this.updatedDisplay = function(letter) {
+
+    for (var i = 0; i < wordArray.length; i++) {
+      if (letter == this.wordArray[i]){
+          this.dashesArray.splice(i, 1, letter);
+      }
+    }
+    this.updated = this.dashesArray.join('');
+    console.log(this.updated);
+  },
+
+  this.checkinWins = function() {
+     console.log('victory check complete')
+     console.log('entered word = ' + this.arrayOfDashes.join(''));
+     console.log(word);
+     if(this.arrayOfDashes.join('') == word){
+     	victory = true;
+     	return victory;
+
+
+  }
+
+}
